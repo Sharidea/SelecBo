@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
@@ -26,7 +27,8 @@ namespace SelecBo
             containerRegistry.RegisterForNavigation<PatchListView>(NavigationNames.PatchList);
 
             // Register types
-            containerRegistry.RegisterSingleton<IScriptService, ScriptService>();
+            //containerRegistry.RegisterSingleton<IScriptService, ScriptService>();
+            containerRegistry.RegisterSingleton<IScriptService, TestScriptService>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

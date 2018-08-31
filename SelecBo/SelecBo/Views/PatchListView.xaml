@@ -9,7 +9,14 @@
              d:DesignWidth="800"
              prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d">
+    <UserControl.Resources>
+        <ResourceDictionary Source="/SelecBo;component/Themes/Styles.xaml" />
+    </UserControl.Resources>
     <Grid Background="Pink">
-        <ListView ItemsSource="{Binding PatchList, Mode=OneWay}" />
+        <ListView Background="Transparent" ItemsSource="{Binding PatchList, Mode=OneWay}">
+            <ListView.Resources>
+                <Style BasedOn="{StaticResource ListViewItemStyle_PatchItem}" TargetType="ListViewItem" />
+            </ListView.Resources>
+        </ListView>
     </Grid>
 </UserControl>

@@ -30,8 +30,8 @@ namespace SelecBo.Models
         public bool Selected { get; set; }
 
         /// <summary>
-        /// Enabled flag.
+        /// Disabled flag.
         /// </summary>
-        public bool Enabled { get; set; }
+        public bool Disabled { get; set; }
     }
 }

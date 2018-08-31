@@ -12,7 +12,7 @@ namespace SelecBo.Servies
 
         public List<PatchItem> Patches { get; set; }
 
-        public void Load()
+        public virtual void Load()
         {
         }
 
