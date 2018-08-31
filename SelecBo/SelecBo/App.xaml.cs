@@ -4,6 +4,7 @@ using Prism.Modularity;
 using Prism.Regions;
 using Prism.Unity;
 using SelecBo.Misc;
+using SelecBo.Servies;
 using SelecBo.Views;
 
 namespace SelecBo
@@ -20,8 +21,12 @@ namespace SelecBo
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            // Register views
             containerRegistry.RegisterSingleton<Shell>();
             containerRegistry.RegisterForNavigation<PatchListView>(NavigationNames.PatchList);
+
+            // Register types
+            containerRegistry.RegisterSingleton<IScriptService, ScriptService>();
         }
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)

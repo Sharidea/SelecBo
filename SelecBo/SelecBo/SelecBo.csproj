@@ -82,6 +82,7 @@
     </ApplicationDefinition>
     <Compile Include="Misc\NavigationNames.cs" />
     <Compile Include="Misc\RegionNames.cs" />
+    <Compile Include="Servies\ScriptService.cs" />
     <Compile Include="ViewModels\PatchListViewModel.cs" />
     <Compile Include="Views\PatchListView.xaml.cs">
       <DependentUpon>PatchListView.xaml</DependentUpon>
@@ -100,6 +101,10 @@
       <DependentUpon>Shell.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Themes\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\PatchListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
