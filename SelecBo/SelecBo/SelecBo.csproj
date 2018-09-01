@@ -82,6 +82,7 @@
     </ApplicationDefinition>
     <Compile Include="Misc\NavigationNames.cs" />
     <Compile Include="Misc\RegionNames.cs" />
+    <Compile Include="Models\PatchArgument.cs" />
     <Compile Include="Servies\TestScriptService.cs" />
     <Compile Include="Servies\ScriptService.cs" />
     <Compile Include="ViewModels\PatchListViewModel.cs" />

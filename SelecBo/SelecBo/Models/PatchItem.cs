@@ -1,9 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SelecBo.Models
 {
     public class PatchItem
     {
+        public PatchItem()
+        {
+            CommandArgumets = new List<PatchArgument>();
+        }
+
         /// <summary>
         /// The title of patch item.
         /// </summary>
@@ -22,7 +28,7 @@ namespace SelecBo.Models
         /// <summary>
         /// The arguments of <see cref="Command"/>.
         /// </summary>
-        public string CommandArgumets { get; set; }
+        public List<PatchArgument> CommandArgumets { get; set; }
 
         /// <summary>
         /// Selected flag.
