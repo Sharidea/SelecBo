@@ -3,9 +3,5 @@
                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                         xmlns:local="clr-namespace:SelecBo"
                         xmlns:prism="http://prismlibrary.com/">
-    <Application.Resources>
-        <Style TargetType="FrameworkElement">
-            <Setter Property="Focusable" Value="False" />
-        </Style>
-    </Application.Resources>
+    <Application.Resources />
 </prism:PrismApplication>
