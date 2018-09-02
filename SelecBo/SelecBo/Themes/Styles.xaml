@@ -10,15 +10,54 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="4*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
 
-                            <CheckBox Grid.Column="0"
+                            <CheckBox Grid.Row="0"
+                                      Grid.Column="0"
                                       Content="{Binding Title}"
                                       IsChecked="{Binding Selected}" />
-                            <Label Grid.Column="1" Content="{Binding Info}" />
-                            <Button Grid.Column="2" Content="Run" />
+                            <Label Grid.Row="0"
+                                   Grid.Column="1"
+                                   Content="{Binding Info}"
+                                   FontStyle="Italic" />
+                            <Button Grid.Row="0"
+                                    Grid.RowSpan="2"
+                                    Grid.Column="2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Content="Run" />
+
+                            <ListView Grid.Row="1"
+                                      Grid.Column="1"
+                                      Margin="5"
+                                      ItemsSource="{Binding CommandArgumets}">
+                                <ListView.Resources>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate>
+                                                    <Border Margin="15">
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="*" />
+                                                                <ColumnDefinition Width="*" />
+                                                            </Grid.ColumnDefinitions>
+                                                            <Label Grid.Column="0" Content="{Binding Name}" />
+                                                            <TextBox Grid.Column="1" Text="{Binding Value}" />
+                                                        </Grid>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </ListView.Resources>
+                            </ListView>
                         </Grid>
                     </Border>
                 </ControlTemplate>

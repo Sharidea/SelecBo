@@ -13,7 +13,9 @@
         <ResourceDictionary Source="/SelecBo;component/Themes/Styles.xaml" />
     </UserControl.Resources>
     <Grid Background="Pink">
-        <ListView Background="Transparent" ItemsSource="{Binding PatchList, Mode=OneWay}">
+        <ListView Background="Transparent"
+                  Focusable="False"
+                  ItemsSource="{Binding PatchList, Mode=OneWay}">
             <ListView.Resources>
                 <Style BasedOn="{StaticResource ListViewItemStyle_PatchItem}" TargetType="ListViewItem" />
             </ListView.Resources>

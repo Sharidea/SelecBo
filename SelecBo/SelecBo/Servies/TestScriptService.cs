@@ -10,7 +10,17 @@ namespace SelecBo.Servies
             {
                 Title = "Test Item",
                 Info = "This is a test item",
-                Selected = true
+                Selected = true,
+            });
+            Patches.Add(new PatchItem
+            {
+                Title = "Test Item 2",
+                Info = "This is another test item",
+                Selected = false,
+            });
+            Patches[0].CommandArgumets.Add(new PatchArgument<string>
+            {
+                Name = "MieMie",
             });
         }
     }
